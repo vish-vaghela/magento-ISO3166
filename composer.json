@@ -1,0 +1,25 @@
+{
+    "name": "dhairvi/module-iso3166",
+    "description": "ISO 3166-1 Data for Magento 2",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0"
+    ],
+    "authors": [
+        {
+          "name": "Vishvajitsinh Vaghela",
+          "email": "support@dhairvi.com",
+          "homepage": "https://www.dhairvi.com/",
+          "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Dhairvi\\ISO3166\\": ""
+        }
+    }
+}
