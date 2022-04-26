@@ -14,70 +14,17 @@ Data prepared from this link https://www.iso.org/obp/ui/#search
 
 Last data updated on 19 April 2022.
 
+
+## how to install on Magento 2:
+- **manually Install:**
+Download files from here and upload them at /app/code/Dhairvi/ISO3166/
+
+- **Composer Install:**
+composer require dhairvi/module-iso3166
+
+
 ## How to Use:
 
-
-    
-    public function __construct(
-        \Dhairvi\ISO3166\Model\Collection $cntCollection
-    )
-    {
-        $this->iso3166Collection = $cntCollection;
-    }
-
-    /**
-     * Get country numeric code by 2 digit country code.
-     */
-    public function getCountryNumericCodeByCountryTwoDigitCode($countryCode)
-    {
-        $country3DigitNumericCode = $this->iso3166Collection->getNumericCodeByCountryCode(strtoupper($countryCode));
-        return $country3DigitNumericCode;
-        
-        //If $countryCode = 'US' then  output = 840
-    }
-
-    /**
-     * Get Country numeric code by 3 digit country code.
-     */
-    public function getCountryNumericCodeByCountryThreeDigitCode($countryCode)
-    {
-        $country3DigitNumericCode = $this->iso3166Collection->getNumericCodeByCountryCode3(strtoupper($countryCode));
-        return $country3DigitNumericCode;
-
-        //If $countryCode = 'USA' then  output = 840
-    }
-
-    /**
-     * Get Country 2 digits code by country numeric code.
-     */
-    public function getCountryTwoDigitCodeByNumericCode($numericCode)
-    {
-        $country3DigitNumericCode = $this->iso3166Collection->getTwoDigitCountryCodeByNumericCode($numericCode);
-        return $country3DigitNumericCode;
-
-        //If $countryCode = '840' then  output = US
-    }
-
-    /**
-     * Get Country 3 digits code by country numeric code.
-     */
-    public function getCountryThreeDigitCodeByNumericCode($numericCode)
-    {
-        $country3DigitNumericCode = $this->iso3166Collection->getThreeDigitCountryCodeByNumericCode($numericCode);
-        return $country3DigitNumericCode;
-
-        //If $countryCode = '840' then  output = USA
-    }
-
-     /**
-     * Get Country Name by numeric code.
-     */
-    public function getCountryNameByNumericCode($numericCode)
-    {
-        $country3DigitNumericCode = $this->iso3166Collection->getCountryNamebyNumericCode($numericCode);
-        return $country3DigitNumericCode;
-
-        //If $countryCode = '840' then  output = United States Of America
-    }
-
+Review our blog post to know how to use this module
+https://www.dhairvi.com/magento-2-get-a-country-numeric-code-using-country-code/
 
